@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>UrbanEdge</h1>
+            </div>
+            <ul>
+                <li><a id="home" onclick="home()">Home</a></li>
+                <li><a id="shop" onclick="shop()">Shops</a></li>
+                <li><a id="blog" onclick="blog()">Blog</a></li>
+                <li><a id="about" onclick="about()">About</a></li>
+                <li><a id="contact" onclick="contact()">Contact</a></li>
+                <li onclick="openCart()" class="addCartIcon" style="position: relative; cursor: pointer;">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount">0</span>
+                </li>
+
+
+            </ul>
+        </nav>
+        <div class="addCart" style="display: none; padding: 20px;">
+            <h2>Your Cart</h2>
+            <div id="cartItemsContainer"></div>
+            <button onclick="clearCart()">Clear Cart</button>
+            <button onclick="home()">Back to Home</button>
+        </div>
+
+        <div class="mainPage">
+            <div class="text">
+                <h2> Welcome to <span>UrbanEdge...</span></h2>
+                <h1 class="heads">Exclusive Deals Await!</h1>
+                <h1>Discover Your Style</h1>
+                <p>Explore a wide collection of stylish and affordable fashion items for everyone.</p>
+                <button>Explore</button>
+            </div>
+            <img src="m3.png" alt="">
+        </div>
+
+         <div class="cardgirl">
+            <div class="head">
+                <h1>UrbanEdge <span>Women's Collection</span></h1>
+            </div>
+
+            <div class="card">
+                <div class="crd">
+                    <img src="wn6.webp" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Stylish Women's Tops</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="wn4.webp" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Stylish Women's Dress</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="wn5.webp" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Stylish Women's One Piece Dress</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardMen">
+            <div class="head">
+                <h1>UrbanEdge <span>Men's Collection</span></h1>
+            </div>
+            <div class="card" id="item1">
+                <div class="crd">
+                    <img src="srt1.webp" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Classic Cotton T-Shirts</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="srt2.webp" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Classic Cotton T-Shirts</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                
+                 <div class="crd">
+                    <img src="men4.png" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Classic Cotton Shirts</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+
+        <!-- Full cart -->
+        <div class="fullPage">
+            <img id="cartImg" src=" " alt="">
+            <div class="cartText">
+                <h1>UrbanEdge Offers : Fashion You Can't Miss</h1>
+                <h2>Special Price</h2>
+                <h2>₹899 Only</h2>
+                <p>Premium quality apparel at unbeatable prices.</p>
+                <p>Limited stock available. Don't miss out!</p>
+                <p>Perfect for all occasions and every season.</p>
+                <div class="btn">
+                    <button>Buy Now</button>
+                    <button onclick="addToCart()">Add To Cart</button>
+                </div>
+                <div class="btns">
+                    <button class="relode" onclick="location.reload()">Back</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Add to cart -->
+
+
+        <div class="blogContent">
+            <div class="head">
+                <h1>UrbanEdge Top <span>Blog's</span></h1>
+            </div>
+
+            <div class="trd">
+                <div class="trending">
+                    <img src="tr1.webp" alt="">
+                    <div class="txt">
+                        <h3>Top Picks for Women</h3><br>
+                        <p>Explore this season's must-have looks curated by fashion experts.</p><br>
+                        <a href="https://influencermarketinghub.com/best-fashion-blogs/">Read More</a>
+                    </div>
+                </div>
+                <div class="trending">
+                    <img src="tr3.webp" alt="">
+                    <div class="txt">
+                        <h3>Men's Style Guide</h3><br>
+                        <p>Stay updated with the latest trends in men's fashion and grooming.</p><br>
+                        <a href="https://www.apetogentleman.com/">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="trd">
+               
+                <div class="trending">
+                    <img src="bg2.png" alt="">
+                    <div class="txt">
+                        <h3>Men's Style Guide</h3><br>
+                        <p>Stay updated with the latest trends in men's fashion and grooming.</p><br>
+                        <a href="https://www.apetogentleman.com/">Read More</a>
+                    </div>
+                </div>
+                 <div class="trending">
+                    <img src="bg1.png" alt="">
+                    <div class="txt">
+                        <h3>Best Dress for Women</h3><br>
+                        <p>Explore this season's must-have looks curated by fashion experts.</p><br>
+                        <a href="https://www.whowhatwear.com/best-fashion-blogs-to-follow">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="about">
+            <div class="aboutText">
+                <h1>#About UrbanEdge...</h1>
+                <p>We're committed to redefining fashion with quality and affordability.</p>
+            </div>
+
+            <div class="aboutus">
+                <img src="lap.png" alt="">
+                <div class="dumiText">
+                    <h1>Who we are?</h1>
+                    <p>UrbanEdge is your trusted online destination for fashionable, functional clothing. With a wide
+                        range of collections for every age and occasion, we bring global style to your doorstep with a
+                        focus on quality and customer satisfaction.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            <div class="contactBanner">
+                <h1>#Get in Touch</h1>
+                <p>We're here to help! Reach out with any queries or feedback.</p>
+            </div>
+
+            <div class="connect">
+                <div class="connectText">
+                    <h2>Visit Our Office</h2>
+                    <p><strong>Address:</strong> Kamothe, Navi Mumbai, India</p>
+                    <p><strong>Email:</strong> UrbanEdge@gmail.com</p>
+                    <p><strong>Phone:</strong> +91 99999 00000</p>
+                </div>
+            </div>
+
+            <div class="form">
+                <h2>Connect with Us</h2>
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+                <input type="tel" placeholder="Phone Number">
+                <input type="text" placeholder="Your Address">
+                <textarea placeholder="Your Message" rows="4"></textarea>
+                <button>Submit</button>
+            </div>
+        </div>
+
+
+        <div class="letter">
+            <div class="sign">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates and exclusive deals directly to your inbox.</p>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Enter your Email Address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="Ftext">
+                <h1>UrbanEdge</h1>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Satisfaction</p>
+            </div>
+            <div class="Ftext">
+                <h3>About Us</h3>
+                <p>Address: Kamothe
+                <pre>Navi Mumbai</pre>
+                <pre>street 401</pre>
+                </p>
+                <p>Service</p>
+                <p>Customer</p>
+
+            </div>
+            <div class="Ftext">
+                <h3>Contact</h3>
+                <p>+91 99999 00000</p>
+                <p>Customer</p>
+                <p>Coming up..</p>
+                <p>New Arrival</p>
+            </div>
+            <div class="Ftext">
+                <h3>Trending</h3>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Shops</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
